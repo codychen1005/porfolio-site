@@ -15,7 +15,7 @@ import avatar from "../avatar.png";
 const useStyles = makeStyles(theme =>({
     menuSliderContainer: {
         width: 250,
-        background: "#4caf50",
+        background: "tan",
         height: "100%"
     },
     avatar : {
@@ -33,8 +33,8 @@ const useStyles = makeStyles(theme =>({
 
 const menuItems = [
     {
-     listIcon: <Home/>,
-     listText: "Home"
+        listIcon: <Home />,  
+        listText: "Home"
     },
     {
         listIcon: <AssignmentInd/>,
@@ -61,7 +61,11 @@ const Navbar = () => {
 
     const classes = useStyles();
     const sideList = slider => (
-        <Box className = {classes.menuSliderContainer} component = "div">
+        <Box className = {classes.menuSliderContainer} 
+        component = "div"
+        onClick={toggleSlider(slider,false)}   
+        >
+
         <Avatar className = {classes.avatar} src ={avatar} alt = "Weihong Chen"/>
         <Divider/>
         <List>
