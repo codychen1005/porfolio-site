@@ -2,8 +2,11 @@ import { AppBar, Avatar, Box, Divider, IconButton, List, ListItem, ListItemIcon,
 import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import MobilRightMenuSlider from "@material-ui/core/Drawer";
+import {Link} from "react-router-dom";
+import BusinessCenterOutlinedIcon from '@material-ui/icons/BusinessCenterOutlined';
 import {
-ArrowBack, 
+ArrowBack,
+ArrowForward, 
 AssignmentInd,
 Home,
 Apps,
@@ -34,22 +37,30 @@ const useStyles = makeStyles(theme =>({
 const menuItems = [
     {
         listIcon: <Home />,  
-        listText: "Home"
+        listText: "Home",
+        listPath: "/"
+    },
+    {
+        listIcon: <BusinessCenterOutlinedIcon/>,
+        listText: "Work Experience",
+        listPath: "/resume"
     },
     {
         listIcon: <AssignmentInd/>,
-        listText: "Resume"
+        listText: "Resume",
+        listPath: "/cover"
     },
     {
         listIcon: <Apps/>,
-        listText: "Portfolio"
+        listText: "Projects",
+        listPath: "/projects"
     },
     {
         listIcon: <ContactMail/>,
-        listText: "Contacts"
+        listText: "Contacts",
+        listPath: "/contacts"
     },
-
-]
+];
 
 const Navbar = () => {
     const [state, setState] = useState({
@@ -62,17 +73,20 @@ const Navbar = () => {
     const classes = useStyles();
     const sideList = slider => (
         <Box className = {classes.menuSliderContainer} 
-        component = "div"
-        onClick={toggleSlider(slider,false)}   
+            component = "div"
+            onClick={toggleSlider(slider,false)}   
         >
 
         <Avatar className = {classes.avatar} src ={avatar} alt = "Weihong Chen"/>
         <Divider/>
         <List>
             {menuItems.map((lsItem, key)=>(
-                <ListItem button ={key}>
-                <ListItemIcon className={classes.listItem}> {lsItem.listIcon} </ListItemIcon>
-                <ListItemText className={classes.listItem} primary = {lsItem.listText} />
+                <ListItem button key={key} component={Link} to={lsItem.listPath}>
+                <ListItemIcon className={classes.listItem}>
+                 {lsItem.listIcon} 
+                 </ListItemIcon>
+                <ListItemText className={classes.listItem} 
+                primary = {lsItem.listText} />
                 </ListItem>
             ))}
         </List>
@@ -85,7 +99,7 @@ const Navbar = () => {
         <AppBar position ='static' style={{background: "#222"}}>
             <Toolbar>
                 <IconButton onClick = {toggleSlider("left", true)}>
-                    <ArrowBack style ={{color: "tomato"}}/>
+                    <ArrowForward style ={{color: "tomato"}}/>
                 </IconButton>
                 <Typography variant="h5" style = {{color: "tan"}}> Portfolio </Typography>
             <MobilRightMenuSlider 
