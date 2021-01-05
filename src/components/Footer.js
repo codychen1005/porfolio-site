@@ -27,7 +27,7 @@ const Footer = () => {
     return (
         (<BottomNavigation width="auto" style={{background:"#222"}}>
             <Grid container item xs={12} spacing={4}>
-            <BottomNavigationAction className={classes.root} style ={{padding:0}} icon={<FacebookIcon style={{color: "#17a2b8"}} />}
+            <BottomNavigationAction className={classes.root} style ={{padding:0}} icon={<FacebookIcon />}
                 icon={
                     <a href="https://www.facebook.com/cody.chen.585" target="_blank" rel="noreferrer">
                         <FacebookIcon/>
@@ -37,7 +37,7 @@ const Footer = () => {
             </Grid>
 
             <Grid container item xs={12} spacing={4}>
-            <BottomNavigationAction className={classes.root} style ={{padding:0}} icon={<LinkedInIcon style={{color: "#17a2b8"}}/>}
+            <BottomNavigationAction className={classes.root} style ={{padding:0}} icon={<LinkedInIcon/>}
                 icon={
                     <a href="https://www.linkedin.com/in/weihongchen1005" target="_blank" rel="noreferrer">
                         <LinkedInIcon/>
@@ -47,7 +47,7 @@ const Footer = () => {
             </Grid>
 
             <Grid container item xs={12} spacing={4}>
-            <BottomNavigationAction className={classes.root} style ={{padding:0}} icon={<GitHubIcon style={{color: "#17a2b8"}}/>}
+            <BottomNavigationAction className={classes.root} style ={{padding:0}} icon={<GitHubIcon />}
                 icon={
                     <a href="https://github.com/codychen1005" target="_blank" rel="noreferrer">
                         <GitHubIcon/>
@@ -57,7 +57,7 @@ const Footer = () => {
             </Grid>
 
             <Grid container item xs={12} spacing={4}>
-             <BottomNavigationAction className={classes.root} style ={{padding:0}} icon={<InstagramIcon style={{color: "#17a2b8"}}/>}
+             <BottomNavigationAction className={classes.root} style ={{padding:0}} icon={<InstagramIcon/>}
                 icon={
                     <a href="https://www.instagram.com/cody.chen.585/?hl=en" target="_blank" rel="noreferrer">
                         <InstagramIcon/>
