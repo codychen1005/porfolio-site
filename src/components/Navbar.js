@@ -1,9 +1,11 @@
-import { AppBar, Avatar, Box, Divider, IconButton, List, ListItem, ListItemIcon, ListItemText, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Avatar, Grid, Box, Divider, IconButton, List, ListItem, ListItemIcon, ListItemText, Toolbar, Typography } from '@material-ui/core';
 import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import MobilRightMenuSlider from "@material-ui/core/Drawer";
 import {Link} from "react-router-dom";
 import BusinessCenterOutlinedIcon from '@material-ui/icons/BusinessCenterOutlined';
+import MenuOpenIcon from '@material-ui/icons/MenuOpen';
+import Footer from "./Footer";
 import {
 ArrowBack,
 ArrowForward, 
@@ -96,12 +98,22 @@ const Navbar = () => {
     return (
         <>
         <Box component="nav">
-        <AppBar position ='static' style={{background: "#222"}}>
+        <AppBar position ='static' style={{background: "#222"}}>            
             <Toolbar>
                 <IconButton onClick = {toggleSlider("left", true)}>
-                    <ArrowForward style ={{color: "tomato"}}/>
+                    <MenuOpenIcon style ={{color: "17a2b8"}}/>
                 </IconButton>
                 <Typography variant="h5" style = {{color: "tan"}}> Portfolio </Typography>
+                
+                <Grid
+                    container
+                    direction="row"
+                    justify="flex-end"
+                    alignItems="flex-start">
+                    <Grid item>
+                        <Footer/>
+                    </Grid>
+                </Grid>
             <MobilRightMenuSlider 
             anchor ="left"
             open={state.left}
@@ -109,7 +121,6 @@ const Navbar = () => {
             > 
 
                 {sideList("left")}
-                
             </MobilRightMenuSlider>
             </Toolbar>
         </AppBar>
