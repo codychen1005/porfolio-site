@@ -1,6 +1,6 @@
 import React from 'react';
 import {Box,Grid,Card,CardActionArea,CardActions,CardContent,CardMedia,Button,Typography} from "@material-ui/core";
-import {makeStyle, makeStyles} from "@material-ui/core/styles";
+import {makeStyles} from "@material-ui/core/styles";
 import Navbar from "./Navbar";
 import project1 from "../images/html-css-javascript-lg.jpg";
 import project2 from "../images/react.png";
@@ -12,7 +12,6 @@ const useStyles = makeStyles({
     },
     cardContainer: {
         maxWidth: 345,
-        margin:"3rem",
         margin: "5rem auto"
     }
 });
