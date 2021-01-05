@@ -7,8 +7,6 @@ import BusinessCenterOutlinedIcon from '@material-ui/icons/BusinessCenterOutline
 import MenuOpenIcon from '@material-ui/icons/MenuOpen';
 import Footer from "./Footer";
 import {
-ArrowBack,
-ArrowForward, 
 AssignmentInd,
 Home,
 Apps,
