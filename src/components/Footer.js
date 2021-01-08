@@ -18,7 +18,8 @@ const useStyles = makeStyles({
                 fill: "white",
                 fontSize: "1.8rem"
             }
-        }
+        },
+        color: "white",
     },
 })
 
@@ -27,9 +28,9 @@ const Footer = () => {
     return (
         (<BottomNavigation width="auto" style={{background:"#222"}}>
             <Grid container item xs={12} spacing={4}>
-            <BottomNavigationAction className={classes.root} style ={{padding:0}} icon={<FacebookIcon />}
+            <BottomNavigationAction className={classes.root} style ={{padding:0}} onClick={(e) =>{e.preventDefault(); window.open("https://www.facebook.com/cody.chen.585")}} icon={<FacebookIcon/>}
                 icon={
-                    <a href="https://www.facebook.com/cody.chen.585" target="_blank" rel="noreferrer">
+                    <a onClick={(e) =>{e.preventDefault(); window.open("https://www.facebook.com/cody.chen.585")}} target="_blank" rel="noreferrer">
                         <FacebookIcon/>
                     </a>
                 }
@@ -37,17 +38,18 @@ const Footer = () => {
             </Grid>
 
             <Grid container item xs={12} spacing={4}>
-            <BottomNavigationAction className={classes.root} style ={{padding:0}} icon={<LinkedInIcon/>}
+            <BottomNavigationAction className={classes.root} style ={{padding:0}} onClick={(e) =>{e.preventDefault(); window.open("https://www.linkedin.com/in/weihongchen1005")}} icon={<LinkedInIcon/>} 
                 icon={
                     <a href="https://www.linkedin.com/in/weihongchen1005" target="_blank" rel="noreferrer">
                         <LinkedInIcon/>
                     </a>
                 }
+                
             />
             </Grid>
 
             <Grid container item xs={12} spacing={4}>
-            <BottomNavigationAction className={classes.root} style ={{padding:0}} icon={<GitHubIcon />}
+            <BottomNavigationAction className={classes.root} style ={{padding:0}} onClick={(e) =>{e.preventDefault(); window.open("https://github.com/codychen1005")}} icon={<GitHubIcon />}
                 icon={
                     <a href="https://github.com/codychen1005" target="_blank" rel="noreferrer">
                         <GitHubIcon/>
@@ -57,7 +59,7 @@ const Footer = () => {
             </Grid>
 
             <Grid container item xs={12} spacing={4}>
-             <BottomNavigationAction className={classes.root} style ={{padding:0}} icon={<InstagramIcon/>}
+             <BottomNavigationAction className={classes.root} style ={{padding:0}} onClick={(e) =>{e.preventDefault(); window.open("https://www.instagram.com/cody.chen.585/?hl=en")}} icon={<InstagramIcon/>}
                 icon={
                     <a href="https://www.instagram.com/cody.chen.585/?hl=en" target="_blank" rel="noreferrer">
                         <InstagramIcon/>
