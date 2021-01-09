@@ -142,7 +142,20 @@ const Projects = () => {
                 Project 2
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
-                Project 2 description:...
+              <Box
+                  style={{
+                    display: "left",
+                    height: "1000",
+                    // justifyContent: "center",
+                    // alignItems: "center",
+                  }}
+                >
+                  PS C:\Users\longc\portfolio-site> git init Reinitialized
+                  existing Git repository in C:/Users/longc/portfolio-site/.git/
+                  PS C:\Users\longc\portfolio-site> git remote add origin
+                  https://github.com/codychen1005.io/porfolio-site.git fatal:
+                </Box>
+
               </Typography>
             </CardContent>
             {/* </CardActionArea> */}
@@ -195,8 +208,17 @@ const Projects = () => {
                     // alignItems: "center",
                   }}
                 >
-                  Line 33:21: The href attribute is required for an anchor to be
-                  keyboard accessible. ress as the href value.
+                  PS C:\Users\longc\portfolio-site> git init Reinitialized
+                  existing Git repository in C:/Users/longc/portfolio-site/.git/
+                  PS C:\Users\longc\portfolio-site> git remote add origin
+                  https://github.com/codychen1005.io/porfolio-site.git fatal:
+                  remote origin already exists. PS
+                  C:\Users\longc\portfolio-site> git status On branch master
+                  Your branch is up to date with 'origin/master' PS
+                  C:\Users\longc\portfolio-site> git status On branch master
+                  Your branch is up to date with 'origin/master' PS
+                  C:\Users\longc\portfolio-site> git status On branch master
+                  Your branch is up to date with 'origin/master'
                 </Box>
               </Typography>
             </CardContent>
