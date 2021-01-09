@@ -150,9 +150,9 @@ const Projects = () => {
                     // alignItems: "center",
                   }}
                 >
-                  PS C:\Users\longc\portfolio-site> git init Reinitialized
+                  PS C:\Users\longc\portfolio-site git init Reinitialized
                   existing Git repository in C:/Users/longc/portfolio-site/.git/
-                  PS C:\Users\longc\portfolio-site> git remote add origin
+                  PS C:\Users\longc\portfolio-site git remote add origin
                   https://github.com/codychen1005.io/porfolio-site.git fatal:
                 </Box>
 
@@ -208,17 +208,10 @@ const Projects = () => {
                     // alignItems: "center",
                   }}
                 >
-                  PS C:\Users\longc\portfolio-site> git init Reinitialized
+                  PS C:\Users\longc\portfolio-site git init Reinitialized
                   existing Git repository in C:/Users/longc/portfolio-site/.git/
-                  PS C:\Users\longc\portfolio-site> git remote add origin
-                  https://github.com/codychen1005.io/porfolio-site.git fatal:
-                  remote origin already exists. PS
-                  C:\Users\longc\portfolio-site> git status On branch master
-                  Your branch is up to date with 'origin/master' PS
-                  C:\Users\longc\portfolio-site> git status On branch master
-                  Your branch is up to date with 'origin/master' PS
-                  C:\Users\longc\portfolio-site> git status On branch master
-                  Your branch is up to date with 'origin/master'
+                  PS C:\Users\longc\portfolio-site git remote add origin
+                  
                 </Box>
               </Typography>
             </CardContent>
